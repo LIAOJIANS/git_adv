@@ -1,0 +1,14 @@
+#!/bin/sh  
+# pre-commit hook  
+ 
+# 定义一个变量`lint_command`，并赋值为`eslint --fix .`。这里，`eslint`是JavaScript的一个代码风格检查工具
+# Check code style using lint tool  
+lint_command="eslint --fix ."  
+$lint_command  
+
+# 检查上一个命令（即`eslint`）的退出状态。如果退出状态不是0（即`eslint`报告了问题），则执行以下代码块。
+# Exit with non-zero status if lint fails  
+if [ $? -ne 0 ]; then  
+    echo "Lint failed. Please fix the issues before committing."  
+    exit 1  
+fi
