@@ -1,0 +1,3 @@
+[submodule "path/to/js-hodgepodge"]  
+	path = path/to/js-hodgepodge
+	url = https://github.com/LIAOJIANS/js-hodgepodge.git
